@@ -1,5 +1,7 @@
 
-# code adapted from repo [yitu-opensource MobileNeXt](https://github.com/yitu-opensource/MobileNeXt)
+
+# Updates 26/10/2020
+code adapted from repo [yitu-opensource MobileNeXt](https://github.com/yitu-opensource/MobileNeXt)
 # rethinking_bottleneck_design
 This repo contains the code for the paper Rethinking Bottleneck Structure for Efficient Mobile Network Design ([ECCV 2020](https://arxiv.org/pdf/2007.02269.pdf))
 
