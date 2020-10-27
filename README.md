@@ -12,7 +12,7 @@
 # rethinking_bottleneck_design
 This repo contains the code for the paper Rethinking Bottleneck Structure for Efficient Mobile Network Design ([ECCV 2020](https://arxiv.org/pdf/2007.02269.pdf))
 
-MNEXT is an light weight models cater for mobile devices. It combines the advantages of traditional ResNet bottleneck building block and the MBV2 inverted residual block. Besides, the newly proposed building block also takes the hardware implementation into consideration such that the memory consumption can be adjusted at algorithm level without minimum impacts on the model performance.
+MobileNeXt(MNEXT) is an light weight models cater for mobile devices. It combines the advantages of traditional ResNet bottleneck building block and the MBV2 inverted residual block. Besides, the newly proposed building block also takes the hardware implementation into consideration such that the memory consumption can be adjusted at algorithm level without minimum impacts on the model performance.
 
 ```
 @article{zhou2020rethinking,
