@@ -10,7 +10,7 @@ import torch.nn as nn
 import torch
 import math
 
-__all__ = ['i2rnetv3',]
+__all__ = ['mnext',]
 
 
 def _make_divisible(v, divisor, min_value=None):
@@ -58,9 +58,9 @@ def group_conv_1x1_bn(inp, oup, expand_ratio):
         nn.ReLU6(inplace=True)
     )
 
-class I2RBlock(nn.Module):
+class SGBlock(nn.Module):
     def __init__(self, inp, oup, stride, expand_ratio, keep_3x3=False):
-        super(I2RBlock, self).__init__()
+        super(SGBlock, self).__init__()
         assert stride in [1, 2]
 
         hidden_dim = inp // expand_ratio
@@ -146,9 +146,9 @@ class I2RBlock(nn.Module):
         else:
             return out
 
-class I2RNet(nn.Module):
+class MXNet(nn.Module):
     def __init__(self, num_classes=1000, width_mult=1.):
-        super(I2RNet, self).__init__()
+        super(MXNet, self).__init__()
         # setting of inverted residual blocks
         self.cfgs = [
             # t, c, n, s
@@ -176,7 +176,7 @@ class I2RNet(nn.Module):
         input_channel = _make_divisible(32 * width_mult, 4 if width_mult == 0.1 else 8)
         layers = [conv_3x3_bn(3, input_channel, 2)]
         # building inverted residual blocks
-        block = I2RBlock
+        block = SGBlock
         for t, c, n, s in self.cfgs:
             output_channel = _make_divisible(c * width_mult, 4 if width_mult == 0.1 else 8)
             if c == 1280 and width_mult < 1:
@@ -220,8 +220,8 @@ class I2RNet(nn.Module):
                 m.weight.data.normal_(0, 0.01)
                 m.bias.data.zero_()
 
-def i2rnetv3(**kwargs):
+def mnext(**kwargs):
     """
     Constructs a MobileNet V2 model
     """
-    return I2RNet(**kwargs)
+    return MXNet(**kwargs)
