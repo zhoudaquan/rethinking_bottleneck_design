@@ -106,7 +106,10 @@ change to mobile deployment folder:
 
 After generating the mobile model based on tf lite, copy the model to the assets folder under the android studio project
 
+## Code for detection on both Pascal VOC and COCO
+
+Please refer to this [repo](https://github.com/Andrew-Qibin/ssdlite-pytorch-mobilenext). Our MobileNeXt improves MobileNetV2 by
+1% (from 22.3% to 23.3%) in terms of mAP under the same settings.
 
 ## To do : 
 1. Add in Android project for apk generation
-2. Add in code for detection
