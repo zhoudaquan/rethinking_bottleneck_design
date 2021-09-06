@@ -26,6 +26,7 @@ MobileNeXt(MNEXT) is an light weight models cater for mobile devices. It combine
 The training framework is modified based on an older version(upon release) of the repo  [pytorch-image-models](https://github.com/rwightman/pytorch-image-models)
 ## Performance
 Model performance at different width multiplier:
+
 Model|Param.(M)|Madd(M)|Top-1 Acc.(%)
 ---|---|---|---
 MobileNeXt-1.40|6.1|590|76.1
