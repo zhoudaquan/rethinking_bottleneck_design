@@ -34,7 +34,9 @@ MobileNeXt-0.75|2.5|210|72
 MobileNeXt-0.50|2.1|110|67.7
 MobileNeXt-0.35|1.8|80|64.7
 
-Latency and accuracy with different tensor multiplier
+
+Latency and accuracy with different tensor multiplier:
+
 
 Model|Tensor multiplier|Madd(M)|Top-1 Acc.(%)|Latency(Pytorch,ms)
 ---|---|---|---|---
@@ -44,6 +46,7 @@ MobileNeXt|2.5|300|73.91|195
 MobileNeXt|2.1|300|73.68|188
 
 Latency measurement with Pytorch and TF Lite:
+
 Model|Pixel 4-CPU(ms)|Pixel 4-GPU(ms)|Platform
 ---|---|---|---
 MBV2|190 - 220|-|Pytorch Mobile
