@@ -41,10 +41,10 @@ Latency and accuracy with different tensor multiplier:
 
 Model|Tensor multiplier|Madd(M)|Top-1 Acc.(%)|Latency(Pytorch,ms)
 ---|---|---|---|---
-MobileNeXt|6.1|300|74.02|211
-MobileNeXt|3.5|300|74.09|196
-MobileNeXt|2.5|300|73.91|195
-MobileNeXt|2.1|300|73.68|188
+MobileNeXt|1|300|74.02|211
+MobileNeXt|2|300|74.09|196
+MobileNeXt|3|300|73.91|195
+MobileNeXt|4|300|73.68|188
 
 Latency measurement with Pytorch and TF Lite:
 
